@@ -111,7 +111,7 @@ let pEsquerda = document.querySelector(".p-esquerda");
 
 let pDireita = document.querySelector(".p-direita");
 
-let nVitrine = document.querySelector(".vitrine-mais-vendidos");
+let nVitrine = document.querySelector("#n-vitrine");
 
 pDireita.addEventListener("click", ()=>{
 	nVitrine.scrollBy(350, 0);
