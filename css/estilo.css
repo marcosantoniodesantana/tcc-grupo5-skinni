@@ -27,6 +27,8 @@ body{
 	width: 100%;
 	height: 150px;
 	background: #0b0c42;
+	z-index: 1000;
+    position: relative;
 }
 
 .itens-cabecalho{
@@ -148,6 +150,64 @@ body{
 	text-decoration: underline;
 }
 
+/*Submenu para itens específicos:*/
+
+.subMenu-inferior{
+	width: 90%;
+	padding-bottom: 200px;
+	background-color: #601f8e;
+	margin: 0 auto 0;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	display: none;
+}
+
+
+.submenu-inferior-mini{
+	width: 100%;
+	background-color: #d1cf28;
+	margin-top: 2%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10px 0 10px 0;
+}
+
+@keyframes anima-icons{
+
+	0%{
+		transform: translateY(0);
+	}
+	
+	50%{
+		transform: translateY(10px);
+	}
+	
+	100%{
+		transform: translateY(0);
+	}
+
+}
+
+.submenu-inferior-mini img{
+	width: 100px;
+	padding: 10px;
+}
+
+.submenu-inferior-mini a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.submenu-inferior-mini a:hover{
+	animation-name: anima-icons;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}
+
 .login-bt-menu{
 	display: none;
 }
@@ -159,6 +219,10 @@ body{
 	color: #e5e32b;
 	text-decoration: none;
 	margin: 35px;
+}
+
+.link-menu span{
+    padding: 12px 0 20px 0;
 }
 
 .marcador-pagina{
