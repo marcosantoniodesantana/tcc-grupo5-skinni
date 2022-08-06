@@ -103,7 +103,7 @@ let subMenuOptions = document.querySelector('.submenu');
 	subMenuOptions.classList.toggle('menu-option-visible');
 });
 
-document.querySelectorAll(".vitrine > .itens").forEach((iten) =>{
+document.querySelectorAll(".vitrine > a").forEach((iten) =>{
 iten.setAttribute('data-aos', 'fade-up');
 iten.setAttribute('data-aos-duration', '2000');
 });

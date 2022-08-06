@@ -37,9 +37,21 @@ for (var i = 0; i < tituloProduto.length; i++) {
     if (tituloProduto[i].innerText.length < limite) {
         tituloProduto[i].classList.toggle("altura");
     }
-
-
 }
+
+let menuItens = document.querySelectorAll(".link-menu > span")
+
+menuItens.forEach(rc => {
+	rc.addEventListener("mouseenter", ()=>{
+		//console.log("Passou sobre o menu")
+		document.querySelector(".subMenu-inferior").style.display = 'block'
+	})
+	
+	rc.addEventListener("mouseout", ()=>{
+		//console.log("Saiu do menu")
+		document.querySelector(".subMenu-inferior").style.display = 'none'
+	})
+});
 
     let intensVitrine = document.querySelectorAll(".itens");
 //Parte responsavél por fazer a execução do menu

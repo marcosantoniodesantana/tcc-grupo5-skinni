@@ -180,7 +180,7 @@ body{
 	}
 	
 	50%{
-		transform: translateY(10px);
+		transform: translateY(-10px);
 	}
 	
 	100%{
@@ -342,6 +342,14 @@ body{
 	display: flex;
 	align-items: center;
 	overflow: auto hidden;
+}
+
+.vitrine a{
+	text-decoration: none;
+}
+
+.vitrine-mais-vendidos a{
+	text-decoration: none;
 }
 
 .vitrine-item{
