@@ -1,4 +1,5 @@
 //Código responsavél por inserir titulo com limitação e corte nas tags marcadas com o id titulo-item
+/*
 let listaTitulo = [
     "Brincos Tanjiro Kamado",
     "Colar Espada Do Zabuza Momochi",
@@ -29,6 +30,22 @@ for (var i = 0; i < tituloProduto.length; i++) {
     if (tituloProduto[i].innerText.length < limite) {
         tituloProduto[i].classList.toggle("altura");
     }
+}
+*/
+
+let clothesTitle = document.querySelectorAll("#titulo-item")
+
+let limite = 20
+
+for (let analise of clothesTitle){
+	const verifica = analise.innerText.length > limite;
+	const pontos = verifica ? "..." : "";
+	analise.innerText = analise.innerText.substring(0, limite) + pontos;
+    
+    if(analise.innerText.length < limite){
+        analise.classList.add("altura")
+    }
+
 }
 
 let menuItens = document.querySelectorAll(".link-menu > span")
@@ -75,6 +92,19 @@ let subMenuOptions = document.querySelector('.submenu');
 document.querySelectorAll(".vitrine > .itens").forEach((iten) =>{
 iten.setAttribute('data-aos', 'fade-up');
 iten.setAttribute('data-aos-duration', '2000');
+});
+
+//Munitora a caixa de pesquisa
+
+let caixaPesquisa = document.querySelector("#pesquisa");
+caixaPesquisa.addEventListener("input", ()=>{
+	if(caixaPesquisa.value.length > 0){
+		document.querySelector(".barra-pesquisa").classList.add("pesquisando");
+		document.querySelector(".pesquisar-icon").style.color = "rgb(229 227 43)";
+	}else{
+		document.querySelector(".barra-pesquisa").classList.remove("pesquisando");
+		document.querySelector(".pesquisar-icon").style.color = "#000000";
+	}
 });
 
 //IMPORTANTE!!!!!! => https://michalsnik.github.io/aos/

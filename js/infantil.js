@@ -1,28 +1,23 @@
 //Código responsavél por inserir titulo com limitação e corte nas tags marcadas com o id titulo-item
+/*
 let listaTitulo = [
     "Baby Body Goku"
 ];
+*/
 
-console.log(listaTitulo.length);
+let clothesTitle = document.querySelectorAll("#titulo-item")
 
-const tituloProduto = document.querySelectorAll("#titulo-item");
-console.log(tituloProduto.length)
+let limite = 20
 
-for (var i = 0; i < tituloProduto.length; i++) {
-    //document.write(tituloProduto[i].innerHTML = listaTitulo)
-    tituloProduto[i].innerHTML = listaTitulo[i+0];
-
-    let limite = 20;
-
-    for (let analise of tituloProduto){
-        const verifica = analise.innerText.length > limite;
-        const pontos = verifica ? "..." : "";
-        analise.innerText = analise.innerText.substring(0, limite) + pontos;
+for (let analise of clothesTitle){
+	const verifica = analise.innerText.length > limite;
+	const pontos = verifica ? "..." : "";
+	analise.innerText = analise.innerText.substring(0, limite) + pontos;
+    
+    if(analise.innerText.length < limite){
+        analise.classList.add("altura")
     }
 
-    if (tituloProduto[i].innerText.length < limite) {
-        tituloProduto[i].classList.toggle("altura");
-    }
 }
 
 let menuItens = document.querySelectorAll(".link-menu > span")
@@ -69,6 +64,19 @@ let subMenuOptions = document.querySelector('.submenu');
 document.querySelectorAll(".vitrine > .itens").forEach((iten) =>{
 iten.setAttribute('data-aos', 'fade-up');
 iten.setAttribute('data-aos-duration', '2000');
+});
+
+//Munitora a caixa de pesquisa
+
+let caixaPesquisa = document.querySelector("#pesquisa");
+caixaPesquisa.addEventListener("input", ()=>{
+	if(caixaPesquisa.value.length > 0){
+		document.querySelector(".barra-pesquisa").classList.add("pesquisando");
+		document.querySelector(".pesquisar-icon").style.color = "rgb(229 227 43)";
+	}else{
+		document.querySelector(".barra-pesquisa").classList.remove("pesquisando");
+		document.querySelector(".pesquisar-icon").style.color = "#000000";
+	}
 });
 
 //IMPORTANTE!!!!!! => https://michalsnik.github.io/aos/

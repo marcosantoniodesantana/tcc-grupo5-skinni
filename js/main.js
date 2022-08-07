@@ -29,7 +29,15 @@ for (var i = 0; i < tituloProduto.length; i++) {
 		tituloProduto[i].classList.toggle("altura");
 	}
 
+let clothesTitle = document.querySelectorAll("#titulo-item")
 
+let limite = 20
+
+for (let analise of clothesTitle){
+	const verifica = analise.innerText.length > limite;
+	const pontos = verifica ? "..." : "";
+	analise.innerText = analise.innerText.substring(0, limite) + pontos;
+}
 }
 */
 
@@ -41,6 +49,11 @@ for (let analise of clothesTitle){
 	const verifica = analise.innerText.length > limite;
 	const pontos = verifica ? "..." : "";
 	analise.innerText = analise.innerText.substring(0, limite) + pontos;
+    
+    if(analise.innerText.length < limite){
+        analise.classList.add("altura")
+    }
+
 }
 
 //Parte responsável por acionar o menu com o mouse

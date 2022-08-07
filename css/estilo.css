@@ -190,7 +190,7 @@ body{
 }
 
 .submenu-inferior-mini img{
-	width: 100px;
+	width: 150px;
 	padding: 10px;
 }
 
@@ -344,7 +344,7 @@ body{
 	overflow: auto hidden;
 }
 
-.vitrine a{
+.vitrine a, .vitrine-item a{
 	text-decoration: none;
 }
 
