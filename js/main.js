@@ -58,19 +58,27 @@ for (let analise of clothesTitle){
 
 //Parte responsável por acionar o menu com o mouse
 
-let menuItens = document.querySelectorAll(".link-menu > span")
+//let menuItens = document.querySelectorAll(".link-menu > span")
+let menuItens = document.querySelectorAll(".opMenu")
 
+
+/*
 menuItens.forEach(rc => {
+	let subMenu = document.querySelector(".subMenu-inferior")
+
 	rc.addEventListener("mouseenter", ()=>{
 		//console.log("Passou sobre o menu")
-		document.querySelector(".subMenu-inferior").style.display = 'block'
+		subMenu.style.display = "block"
 	})
-	
+
 	rc.addEventListener("mouseout", ()=>{
-		//console.log("Saiu do menu")
-		document.querySelector(".subMenu-inferior").style.display = 'none'
+		subMenu.addEventListener("mouseenter", ()=>{
+			subMenu.style.backgroundColor="#ff0043"
+		})
 	})
+
 });
+*/
 
 	let intensVitrine = document.querySelectorAll(".itens");
 //Parte responsavél por fazer a execução do menu
