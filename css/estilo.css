@@ -260,6 +260,37 @@ body{
 	/*position: absolute;*/
 }
 
+.mostruario-menor{
+	width: 100%;
+	background-color: #ff0043;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+}
+
+.vitrine-menor{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	overflow: auto hidden;
+	background-color: #601f8e;
+}
+
+.banners-menores{
+	position: relative;
+}
+
+.submostruario-menor{
+	width: 61%;
+    position: relative;
+    background: #00ff00;
+}
+
+.banners-menores img{
+	width: 500px
+}
+
 /*Por alguma razão que eu desconheço, o seletor nth-child(2) seleciona a primeira class (mostruario)*/
 .mostruario:nth-child(2){
 	overflow: hidden;

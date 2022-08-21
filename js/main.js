@@ -129,6 +129,12 @@ iten.setAttribute('data-aos', 'fade-up');
 iten.setAttribute('data-aos-duration', '2000');
 });
 
+document.querySelectorAll("#banner-secundario").forEach(bn =>{
+	bn.setAttribute("data-aos", "fade-up")
+	bn.setAttribute("data-aos-anchorplacement", "top-bottom")
+	bn.setAttribute("animation-duration", "2000")
+})
+
 //Munitora a caixa de pesquisa
 
 let caixaPesquisa = document.querySelector("#pesquisa");
