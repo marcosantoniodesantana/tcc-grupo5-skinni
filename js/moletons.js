@@ -48,6 +48,7 @@ for (let analise of clothesTitle){
 
 }
 
+/*
 let menuItens = document.querySelectorAll(".link-menu > span")
 
 menuItens.forEach(rc => {
@@ -61,6 +62,7 @@ menuItens.forEach(rc => {
 		document.querySelector(".subMenu-inferior").style.display = 'none'
 	})
 });
+*/
 
     let intensVitrine = document.querySelectorAll(".itens");
 //Parte responsavél por fazer a execução do menu

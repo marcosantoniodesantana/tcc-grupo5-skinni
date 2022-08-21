@@ -339,6 +339,20 @@ footer h2{
     position: sticky;
 }
 
+.subMenu-inferior{
+	width: 90%;
+	padding-bottom: 200px;
+	background-color: #0a0b38;
+	margin: 0 auto 0;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	display: none;
+}
+
+.menu:hover .subMenu-inferior{
+	display: block;
+}
+
 @media screen and (max-width: 1166px){
 	.itens-cabecalho{
 		border-bottom: 0;
