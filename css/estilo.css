@@ -262,7 +262,7 @@ body{
 
 .mostruario-menor{
 	width: 100%;
-	background-color: #ff0043;
+	/*background-color: #ff0043;*/
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -274,7 +274,7 @@ body{
 	display: flex;
 	align-items: center;
 	overflow: auto hidden;
-	background-color: #601f8e;
+	/*background-color: #601f8e;*/
 }
 
 .banners-menores{
@@ -284,7 +284,7 @@ body{
 .submostruario-menor{
 	width: 61%;
     position: relative;
-    background: #00ff00;
+    /*background: #00ff00;*/
 }
 
 .banners-menores img{

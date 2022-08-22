@@ -176,4 +176,26 @@ pEsquerda.addEventListener("click", ()=>{
 	nVitrine.scrollBy(-350, 0);
 })
 
+//Tentativa de padronização dos controles da vitrine
+
+let btnNext = document.querySelectorAll("#next")
+let btnBack = document.querySelectorAll("#back")
+
+btnNext.forEach( next => {
+	next.addEventListener("click", ()=>{
+		console.log("Próximo")
+		document.querySelectorAll("#n-vitrine < #next").forEach(vtr =>{
+			vtr.scrollBy(350, 0)
+		})
+	})
+	
+})
+
+btnBack.forEach( back => {
+	back.addEventListener("click", ()=>{
+		console.log("Anterior")
+	})
+	
+})
+
 //IMPORTANTE!!!!!! => https://michalsnik.github.io/aos/
