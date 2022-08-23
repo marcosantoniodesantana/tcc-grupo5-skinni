@@ -340,6 +340,17 @@ body {
 	align-items: center;
 }
 
+ .banners-link .banner-detalhes img{
+	width: 50%;
+	background: #ff0000;
+}
+
+/* talvez eu habilite isso depois...
+.area-small-banners .banners-link:nth-child(2n + 2){
+	width: 30%;
+}
+*/
+
 .area-small-banners img{
 	width: 45%;
 }
@@ -595,6 +606,7 @@ footer .divisoes-rodape {
 .tipo-forma-pagamento {
 	width: 50px;
 	margin-left: 5px;
+	background-color: rgb(236, 236, 236);
 }
 
 .tipo-forma-pagamento img {
