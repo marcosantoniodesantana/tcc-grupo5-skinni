@@ -58,7 +58,8 @@ section{
 	width: 350px;
 	height: 250px;
 	padding: 50px;
-	background: #7e81b0;
+	/*background: #7e81b0;*/
+	background-color: #0b0c42;
 	border-radius: 10px;
 	box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
 	top: 50%;
@@ -74,6 +75,7 @@ section{
 	font-size: 50px;
 	font-family: 'Merriweather Sans', sans-serif;
 	margin-top: -40px;
+	color: #f4e927;
 }
 
 .area-login{
@@ -129,7 +131,8 @@ input[type="text"]{
 	margin-top: 15px;
 	border-style: none;
     border-radius: 4px;
-    background: #0b0c42;
+    /*background: #0b0c42;*/
+    background-color: #32278b;
     box-shadow: 0px 10px 10px rgb(0 0 0 / 50%);
 }
 
