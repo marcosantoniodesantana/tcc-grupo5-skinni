@@ -1,6 +1,20 @@
+//Ativa a biblioteca okzoom via jQuery
+
+$(document).ready(function(){
+	$('img').okzoom({
+		width: 300,
+		height: 400,
+		round: true,
+		background: "transparent",
+		shadow: "0 0 0 transparent",
+		radius: 10
+	});
+	let a = document.getElementById('ok-lorgnette');
+	a.classList ="roda";
+})
+
 //Parte responsavél por fazer a execução do menu
 
-//aaaaaaa
 let sombraMenu = document.querySelector("#sombra-menu");
 
 let menubt = document.querySelector('#menu-bar');

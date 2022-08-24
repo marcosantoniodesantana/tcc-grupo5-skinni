@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,7 +64,9 @@
 				<li class="opMenu"><a href="../moletons/moletons.html" class="link-menu"><span>Moletons</span></a></li>
 				<li class="opMenu"><a href="../acessorios/acessorios.html" class="link-menu"><span>Acessórios</span></a></li>
 			</ul>
+			<!--
 			<section class="subMenu-inferior"></section>
+			-->
 		</nav>
 	</header>
 	<article id="sombra-menu"></article>
@@ -82,19 +84,28 @@
 
 			<div class="separacoes">
 
-				<select name="tamanho" id="tamanho">
+				<select class="tamanho" name="tamanho" id="tamanho">
 					<option value="P">P</option>
 					<option value="m">M</option>
 					<option value="g">G</option>
 					<option value="gg">GG</option>
 				</select>
 
-				<select name="modelo" id="modelo">
+				<select class="modelo" name="modelo" id="modelo">
 					<option value="masculino">Masculino</option>
 					<option value="feminino">Feminino</option>
 					<option value="unisex">Unisex</option>
 				</select>
 
+			</div>
+
+			<div class="separacoes">
+
+				<figure class="quantidade-caixa">
+					<input type="number" class="quantidade">
+				</figure>
+
+				<button class="comprar"><span>Comprar</span></button>
 			</div>
 
 		</aside>
@@ -161,6 +172,9 @@
 		<div class="copyright"> <h2>© Copyright 2022</h2></div>
 	</footer>
     
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/okzoom-1.0.min.js"></script>
+	
 	<script src="../js/comprar.js"></script>
 
 </body>
