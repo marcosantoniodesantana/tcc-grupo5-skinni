@@ -146,8 +146,6 @@ body{
 	background: #0a0a32;
 }
 
-.menu ul li:hover .link-menu span{}
-
 .menu ul li:hover a{
 	text-decoration: underline;
 }
