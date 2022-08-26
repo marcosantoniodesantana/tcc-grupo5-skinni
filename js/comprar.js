@@ -1,7 +1,7 @@
 //Ativa a biblioteca okzoom via jQuery
 
 $(document).ready(function(){
-	$('img').okzoom({
+	$('.produto').okzoom({
 		width: 300,
 		height: 400,
 		round: true,
