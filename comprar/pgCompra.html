@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../css/pgComprar.css">
     <link rel="shortcut icon" href="../imagens/imagens_pagina/icone_titulo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Merriweather+Sans&display=swap"
+		rel="stylesheet">
 </head>
 <body>
 
@@ -84,33 +89,46 @@
 
 			<div class="separacoes">
 
-				<select class="tamanho" name="tamanho" id="tamanho">
-					<option value="P">P</option>
-					<option value="m">M</option>
-					<option value="g">G</option>
-					<option value="gg">GG</option>
-				</select>
+				<div class="box">
+					<p class="descricao-input">Tamanho</p>
 
-				<select class="modelo" name="modelo" id="modelo">
-					<option value="masculino">Masculino</option>
-					<option value="feminino">Feminino</option>
-					<option value="unisex">Unisex</option>
-				</select>
+					<select class="tamanho" name="tamanho" id="tamanho">
+						<option value="P">P</option>
+						<option value="m">M</option>
+						<option value="g">G</option>
+						<option value="gg">GG</option>
+					</select>
+				</div>
+
+				<div class="box">
+
+					<p class="descricao-input">Modelo</p>
+
+					<select class="modelo" name="modelo" id="modelo">
+						<option value="masculino">Masculino</option>
+						<option value="feminino">Feminino</option>
+						<option value="unisex">Unissex</option>
+					</select>
+				</div>
 
 			</div>
 
 			<div class="separacoes">
 
 				<figure class="quantidade-caixa">
-					<input type="number" class="quantidade" placeholder="Quantidade">
+					<input type="number" class="quantidade"
+					placeholder=" " id="quantidade">
+					<label for="quantidade">Quantidade</label>
 				</figure>
 
 				<button class="comprar"><span>Comprar</span></button>
 			</div>
 
 			<div class="separacoes">
+				
 				<figure class="frete-caixa">
-					<input type="text" placeholder="CEP">
+					<input type="text" id="z" placeholder=" ">
+					<label for="z">Calcular Frete</label>
 				</figure>
 
 				<button class="calcularFrete"><Span>Calcular</Span></button>

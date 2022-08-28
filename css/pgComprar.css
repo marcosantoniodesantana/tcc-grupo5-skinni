@@ -241,7 +241,7 @@ body{
 
 .separacoes{
 	width: 50%;
-	margin-top: 3%;
+	margin-top: 5%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -252,8 +252,18 @@ body{
 }
 
 .separacoes:nth-child(5){
-	top: 10%;
+	top: 5%;
 	position: relative;
+}
+
+.box{
+	position: relative;
+}
+
+.box .descricao-input{
+	font-family: 'Merriweather Sans', sans-serif;
+	text-align: left;
+	margin: 0px 10px 5px 10px;
 }
 
 .quantidade, .frete-caixa input{
@@ -266,12 +276,13 @@ body{
 
 .quantidade-caixa{
 	width: 100px;
-	height: 50px;
+	height: 25px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 5px;
 	border: 3px solid #8a2be2;
+	position: relative;
 }
 
 .frete-caixa{
@@ -282,13 +293,49 @@ body{
 	justify-content: center;
 	border-radius: 5px;
 	border: 3px solid #8a2be2;
+	position: relative;
+}
+
+@keyframes descricao{
+	from{
+		font-size: 1rem;
+		top: 0px;
+	}
+
+	to{
+		font-size: 1rem;
+		top: -70px;
+	}
+}
+
+.frete-caixa > label, .quantidade-caixa > label{
+	position: absolute;
+	left: 0;
+	font-family: 'Merriweather', sans-serif;
+	color: #8a2be2;
+	font-weight: 600;
+}
+
+.frete-caixa > input:focus + label{
+	animation: descricao 1.3s forwards 0.2;
+}
+
+.frete-caixa > input:required + label,
+.frete-caixa > input:not(:placeholder-shown) + label,
+.quantidade-caixa > input:required + label,
+.quantidade-caixa > input:not(:placeholder-shown) + label{
+	top: -20px;
+}
+
+.quantidade-caixa > input:focus + label{
+	animation: descricao 1.3s forwards 0.2;
 }
 
 .comprar, .calcularFrete{
 	background-color: #8a2be2;
 	border-style: none;
 	border-radius: 5px;
-	padding: 10px 20px 10px 20px;
+	padding: 5px 25px 5px 25px;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -298,7 +345,7 @@ body{
 
 .comprar span, .calcularFrete span{
 	color:  #fff;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 1rem;
 }
 
@@ -307,6 +354,20 @@ body{
 	background-color: transparent;
 	/*border: 2px solid #ff0043;*/
 	margin: 0 10px 0 10px;
+}
+
+.separacoes select option{
+	background-color: #d2c9dc;
+	text-align: center;
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+:is(select, option){
+	outline: 0;
+}
+
+.separacoes select option::selection{
+	background-color: #8a2be2;
 }
 
 .aviso{
