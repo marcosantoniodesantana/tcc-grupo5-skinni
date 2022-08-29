@@ -643,7 +643,38 @@ footer h2{
 		width: 100%;
 	}
 
-	.container{}
+	.container{
+		flex-wrap: wrap;
+		height: fit-content;
+		align-items: center;
+		justify-content: center;
+		margin-top: 5%;
+		padding: 10px;
+	}
+
+	.containerImagem{
+		width: 300px;
+		left: 25%;
+		transform: translate(-50%, 0);
+		position: relative;
+	}
+
+	.containerImagem img{
+		width: 100%;
+	}
+
+	.separacoes{
+		flex-direction: column;
+		margin-top: 3%;
+		align-items: center;
+	}
+
+	input,
+	.calcularFrete,
+	.comprar,
+	section{
+		width: 50%;
+	}
 
 	.divisoes-rodape a i{
 		font-size: 4rem;
@@ -786,6 +817,8 @@ footer h2{
 		position: relative;
 		margin: 5px 0px 0px 20px;
 	}
+
+
 
 	footer{
 		height: 300px;

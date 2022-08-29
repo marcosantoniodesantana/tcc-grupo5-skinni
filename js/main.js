@@ -235,4 +235,14 @@ btnBack2.forEach(back => {
 
 })
 
+let nextIcon = document.querySelector(".seta-next")
+nextIcon.addEventListener("click", (btn)=>{
+	document.querySelector(".submenu-inferior-mini").scrollBy( 260, 0)
+})
+
+let backToIcon = document.querySelector(".seta-back")
+backToIcon.addEventListener("click", (btn)=>{
+	document.querySelector(".submenu-inferior-mini").scrollBy( -255, 0)
+})
+
 //IMPORTANTE!!!!!! => https://michalsnik.github.io/aos/
