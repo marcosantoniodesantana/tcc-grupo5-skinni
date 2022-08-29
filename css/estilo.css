@@ -186,7 +186,7 @@ body {
 
 .submenu-inferior-mini {
 	width: 100%;
-	background-color: #d1cf28;
+	/*background-color: #d1cf28;*/
 	margin-top: 2%;
 	display: flex;
 	align-items: center;
@@ -348,6 +348,7 @@ body {
 	background-color: #601f8e;
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 }
@@ -854,8 +855,20 @@ footer h2 {
 		width: 100%;
 	}
 
-	.banners-menores img {
-		flex-direction: row;
+	.area-small-banners{
+		height: fit-content;
+		position: relative;
+	}
+
+	.area-small-banners img{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and(max-width: 1343px){
+	.area-small-banners img{
+		width: 46%;
 	}
 }
 
@@ -1068,6 +1081,11 @@ footer h2 {
 		margin-top: 5%;
 		position: relative;
 		font-size: 1.5rem;
+	}
+
+	.area-small-banners img{
+		width: 100%;
+		margin-bottom: 10px;
 	}
 
 	footer {
