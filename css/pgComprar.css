@@ -643,6 +643,8 @@ footer h2{
 		width: 100%;
 	}
 
+	.container{}
+
 	.divisoes-rodape a i{
 		font-size: 4rem;
 	}
