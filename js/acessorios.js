@@ -42,9 +42,7 @@ for (let analise of clothesTitle){
 	const pontos = verifica ? "..." : "";
 	analise.innerText = analise.innerText.substring(0, limite) + pontos;
     
-    if(analise.innerText.length < limite){
-        analise.classList.add("altura")
-    }
+    analise.classList.add("altura")
 
 }
 
