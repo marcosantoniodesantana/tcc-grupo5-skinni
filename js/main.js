@@ -1,49 +1,6 @@
-//Código responsavél por inserir titulo com limitação e corte nas tags marcadas com o id titulo-item
-/*
-let listaTitulo = [
-	"Camisa Ousa Desafiar o Deus da Guerra",
-	"Camisa Escanor Body Builder",
-	"Camisa Social Ninja",
-	"Moletom Ninja",
-	"Camisa Zabuza Momochi",
-	"Camisa Colisão",
-	"Camisa a Arte é Uma Explosão, BOOM!"
-];
-
-const tituloProduto = document.querySelectorAll("#titulo-item");
-console.log(tituloProduto.length)
-
-for (var i = 0; i < tituloProduto.length; i++) {
-	//document.write(tituloProduto[i].innerHTML = listaTitulo)
-	tituloProduto[i].innerHTML = listaTitulo[i+0];
-
-	let limite = 20;
-
-	for (let analise of tituloProduto){
-		const verifica = analise.innerText.length > limite;
-		const pontos = verifica ? "..." : "";
-		analise.innerText = analise.innerText.substring(0, limite) + pontos;
-	}
-
-	if (tituloProduto[i].innerText.length < limite) {
-		tituloProduto[i].classList.toggle("altura");
-	}
-
 let clothesTitle = document.querySelectorAll("#titulo-item")
 
-let limite = 20
-
-for (let analise of clothesTitle){
-	const verifica = analise.innerText.length > limite;
-	const pontos = verifica ? "..." : "";
-	analise.innerText = analise.innerText.substring(0, limite) + pontos;
-}
-}
-*/
-
-let clothesTitle = document.querySelectorAll("#titulo-item")
-
-let limite = 20
+let limite = 28
 
 for (let analise of clothesTitle) {
 	const verifica = analise.innerText.length > limite;
@@ -54,7 +11,7 @@ for (let analise of clothesTitle) {
 
 }
 
-//Parte responsável por acionar o menu com o mouse
+//Parte responsÃ¡vel por acionar o menu com o mouse
 
 //let menuItens = document.querySelectorAll(".link-menu > span")
 let menuItens = document.querySelectorAll(".opMenu")
@@ -79,7 +36,7 @@ menuItens.forEach(rc => {
 */
 
 let intensVitrine = document.querySelectorAll(".itens");
-//Parte responsavél por fazer a execução do menu
+//Parte responsavÃ©l por fazer a execuÃ§Ã£o do menu
 
 let sombraMenu = document.querySelector("#sombra-menu");
 
@@ -105,7 +62,7 @@ menubt.addEventListener("click", () => {
 
 });
 
-//Fecha o menu caso ele esteja aberto e a página seja rolada
+//Fecha o menu caso ele esteja aberto e a pÃ¡gina seja rolada
 
 window.addEventListener("scroll", () => {
 	while (sombraMenu.classList == "sombra-menu") {
@@ -115,7 +72,7 @@ window.addEventListener("scroll", () => {
 
 document.querySelector(".menu > ul > li:nth-child(2)").classList.toggle("marcador-pagina");
 
-//Parte que adiciona a biblioteca de aparecimento gradual com animação
+//Parte que adiciona a biblioteca de aparecimento gradual com animaÃ§Ã£o
 
 let linkConta = document.querySelector('.menu > ul > li:nth-child(1)').addEventListener("click", () => {
 	let subMenuOptions = document.querySelector('.submenu');
@@ -188,8 +145,8 @@ pEsquerda.addEventListener("click", () => {
 	nVitrine.scrollBy(-350, 0);
 })
 
-//Tentativa de padronização dos controles da vitrine
-//Corrigir isso assim que possível
+//Tentativa de padronizaÃ§Ã£o dos controles da vitrine
+//Corrigir isso assim que possÃ­vel
 
 let btnNext = document.querySelectorAll("#next")
 let btnBack = document.querySelectorAll("#back")
