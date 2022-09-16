@@ -179,156 +179,6 @@ body{
     padding: 12px 0 20px 0;
 }
 
-.marcador-pagina{
-	border-bottom: 5px inset #e5e32b;
-}
-
-.itens-responsivo{
-	max-width: 90%;
-	display: inline-flex;
-	justify-content: space-between;
-	margin-left: 10%;
-}
-
-/*Alterações para esta página em específico:*/
-
-.container{
-    width: 90%;
-    height: 75%;
-    background-color: #d2c9dc;
-	text-align: center;
-	top: 60%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	position: absolute;
-	display: flex;
-	align-items: center;
-
-}
-
-.containerImagem{
-	margin-left: 100px;
-}
-
-.containerImagem img{
-	width: 400px;
-}
-
-.infs{
-	width: 100%;
-	height: 95%;
-	/*background-color: #ff0000;*/
-	text-align: center;
-}
-
-.tituloItem{
-	font-family: sans-serif;
-	font-size: 2rem;
-	margin-top: 5%;
-}
-
-.preco{
-	font-family: sans-serif;
-	font-size: 2rem;
-	margin-top: 3%;
-}
-
-.tamanho, .modelo{
-	border-style: none;
-	border: 3px solid #8a2be2;
-	border-radius: 5px;
-}
-
-.separacoes{
-	width: 50%;
-	margin-top: 5%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	/*background-color: #00ff00;*/
-	left: 50%;
-	transform: translate(-50%, 0);
-	position: relative;
-}
-
-.separacoes:nth-child(5){
-	top: 5%;
-	position: relative;
-}
-
-.box{
-	position: relative;
-}
-
-.box .descricao-input{
-	font-family: 'Merriweather Sans', sans-serif;
-	text-align: left;
-	margin: 0px 10px 5px 10px;
-}
-
-.quantidade, .frete-caixa input{
-	width: 100%;
-	height: 100%;
-	background-color: transparent;
-	border-style: none;
-	outline: 0;
-}
-
-.quantidade-caixa{
-	width: 100px;
-	height: 25px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 5px;
-	border: 3px solid #8a2be2;
-	position: relative;
-}
-
-.frete-caixa{
-	width: 150px;
-	height: 25px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 5px;
-	border: 3px solid #8a2be2;
-	position: relative;
-}
-
-@keyframes descricao{
-	from{
-		font-size: 1rem;
-		top: 0px;
-	}
-
-	to{
-		font-size: 1rem;
-		top: -70px;
-	}
-}
-
-.frete-caixa > label, .quantidade-caixa > label{
-	position: absolute;
-	left: 0;
-	font-family: 'Merriweather', sans-serif;
-	color: #8a2be2;
-	font-weight: 600;
-}
-
-.frete-caixa > input:focus + label{
-	/*animation: descricao 1.3s forwards 0.2;*/
-	font-size: 1rem;
-	top: -20px;
-}
-
-.frete-caixa > input:required + label,
-.frete-caixa > input:not(:placeholder-shown) + label,
-.quantidade-caixa > input:required + label,
-.quantidade-caixa > input:not(:placeholder-shown) + label{
-	top: -20px;
-}
-
 .quantidade-caixa > input:focus + label{
 	/*animation: descricao 1.3s forwards 0.2;*/
 	font-size: 1rem;
@@ -378,6 +228,60 @@ body{
 	color: #ff0043;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	margin-top: 5%;
+}
+
+.marcadores{
+    width: 150px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: #ff0043;
+    margin: 3%;
+}
+
+.marcador{
+    padding: 5px 20px;
+    background-color: #0b0c42;
+    cursor: pointer;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.marcador:nth-child(2){
+    color: #9b9999;
+    background-color: #c9c9c9
+}
+
+.marcador span{
+    font-size: 1.5rem;
+    color: #e5e32b;
+}
+
+.container{
+    width: 100%;
+    background-color: #00ff43;
+    margin-top: 3%;
+    display: flex;
+}
+
+.container .form-area{
+    text-align: center;
+    margin-left: 5%;
+    background-color: #ff0043;
+    padding: 10px;
+}
+
+.input-format{
+    width: 500px;
+    height: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-format input{
+    width: 100%;
+    height: 100%;
 }
 
 .aviso:nth-child(1){
@@ -462,20 +366,6 @@ footer h2{
     align-items: center;
     justify-content: center;
     position: sticky;
-}
-
-.subMenu-inferior{
-	width: 90%;
-	padding-bottom: 200px;
-	background-color: #0a0b38;
-	margin: 0 auto 0;
-	border-bottom-left-radius: 50px;
-	border-bottom-right-radius: 50px;
-	display: none;
-}
-
-.menu:hover .subMenu-inferior{
-	display: block;
 }
 
 @media screen and (max-width: 1166px){
