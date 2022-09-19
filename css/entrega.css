@@ -251,11 +251,11 @@ body{
     width: 100%;
     margin-top: 3%;
     display: flex;
+	justify-content: space-evenly;
 }
 
 .container .form-area{
     text-align: center;
-    margin-left: 7%;
     background-color: #0b0c42;
     padding: 30px;
 	border-radius: 10px;
@@ -384,6 +384,45 @@ h2{
 	font-family: sans-serif;
 	
 	color: #e5e32b;
+}
+
+.produto-card{
+	width: 300px;
+	height: fit-content;
+	background-color: #ff8343;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.infs{
+	margin-left: 10px;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #ff0043;
+}
+
+.infs p{
+	font-size: 1.1rem;
+}
+
+.infs span{
+	font-size: 2rem;
+}
+
+.infs p, .infs span{
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+.img-container{
+	width: 50%;
+}
+
+.img-container img{
+	width: 100%;
 }
 
 footer{
