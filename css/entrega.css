@@ -238,6 +238,10 @@ body{
     background-color: #9b9b9b;
 }
 
+.marcador:nth-child(2) span{
+	color: #cfcdcd;
+}
+
 .marcador span{
     font-size: 1.5rem;
     color: #e5e32b;
@@ -251,13 +255,15 @@ body{
 
 .container .form-area{
     text-align: center;
-    margin-left: 5%;
+    margin-left: 7%;
     background-color: #0b0c42;
-    padding: 10px;
+    padding: 30px;
+	border-radius: 10px;
+	width: 600px;
 }
 
 .input-format{
-    width: 500px;
+    width: 100%;
     height: 25px;
     position: relative;
     display: flex;
@@ -278,17 +284,28 @@ body{
 	color: #ff3443;
 }
 
+.separacao:nth-last-child(3) .input-format > label:before{
+	content: "";
+}
+
 .input-format input{
     width: 100%;
     height: 100%;
+	background-color: #cacaca;
 }
+
 
 .input-format input:focus + label{
 	top: -30px;
 	color: #e5e32b;
 }
 
-.input-format > input:required + label,
+.input-format input:required + label{
+	color: #000;
+	top: 0;
+}
+
+.input-format > input:focus:required + label,
 .input-format > input:not(:placeholder-shown) + label{
 	top: -30px;
 	color: #e5e32b;
@@ -303,6 +320,7 @@ body{
 	width: 100%;
 	display: flex;
 	align-items: center;
+	margin-top: -5%;
 }
 
 .separacao > .input-format:nth-child(1){
@@ -312,6 +330,7 @@ body{
 .separacao > .input-format:nth-child(2){
 	width: 30%;
 	background-color: #8a2be2;
+	margin-left: 0.5%;
 }
 
 .select-format{
@@ -322,31 +341,37 @@ body{
     align-items: center;
     justify-content: center;
 	margin: 5% 0 7% 0;
-	background-color: #6b6b6b;
 }
 
 .select-format select{
 	width: 100%;
 	height: 27px;
+	background-color: #cacaca;
+	border: 0;
 }
 
 .select-format select:before{
 	border: 2px solid #ff0043;
 }
 
-form button[type="submit"]{
-	background-color: #601f8e;
+button[type="submit"]{
+	background-color: #4c1970;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 	border: 0;
 	outline: 0;
 	border-radius: 5px;
-	padding: 10px 50px;
+	padding: 5px 50px;
+}
+
+button[type="submit"]:hover{
+	background-color: #601f8e;
+	transition: 1s;
 }
 
 input[type="text"],
 input[type="number"],
 select{
 	outline: 0;
-	background-color: #cacaca;
 	border:0;
 }
 
