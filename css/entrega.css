@@ -253,7 +253,7 @@ body{
 .container .form-area{
     text-align: center;
     margin-left: 5%;
-    background-color: #ff0043;
+    background-color: #0b0c42;
     padding: 10px;
 }
 
@@ -286,11 +286,13 @@ body{
 
 .input-format input:focus + label{
 	top: -30px;
+	color: #e5e32b;
 }
 
 .input-format > input:required + label,
 .input-format > input:not(:placeholder-shown) + label{
 	top: -30px;
+	color: #e5e32b;
 }
 
 .input-format > input:required + label,
@@ -326,11 +328,38 @@ body{
 
 .select-format select{
 	width: 100%;
-	height: 31px;
+	height: 27px;
+}
+
+.select-format select:before{
+	border: 2px solid #ff0043;
+}
+
+form button[type="submit"]{
+	background-color: #601f8e;
+	border: 0;
+	outline: 0;
+	border-radius: 5px;
+	padding: 10px 50px;
+}
+
+input[type="text"],
+input[type="number"],
+select{
+	outline: 0;
+	background-color: #cacaca;
+	border:0;
+}
+
+form button[type="submit"] span{
+	font-size: 1.5rem;
+	color: #e5e32b;
 }
 
 h2{
 	font-family: sans-serif;
+	
+	color: #e5e32b;
 }
 
 footer{
