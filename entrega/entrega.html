@@ -91,12 +91,12 @@
                     </div>
 
                     <div class="input-format">
-                            <input type="text" required name="telefone" class="telefone" placeholder=" ">
+                            <input type="text" required maxlength="15" id="telefone" name="telefone" class="telefone" placeholder=" ">
                             <label for="nome">Telefone</label>
                     </div>
 
                     <div class="input-format">
-                            <input type="text" required name="cpf" class="cpf" placeholder=" ">
+                            <input type="text" required maxlength="14" name="cpf" id="cpf" class="cpf" placeholder=" ">
                             <label for="nome">CPF</label>
                     </div>
 
@@ -202,6 +202,36 @@
                 </figure>
             </div>
         </section>
+
+        <script>
+            
+            const cpf = document.querySelector("#cpf");
+            cpf.addEventListener("keypress", ()=>{
+	        let cpfFormatado = cpf.value.length;
+
+        	if (cpfFormatado === 3) {
+    	    	cpf.value += ".";
+	        } else if(cpfFormatado === 7){
+        		cpf.value += ".";
+        	} else if (cpfFormatado === 11) {
+		        cpf.value += "-";
+	        }
+            });
+
+            const telefone = document.querySelector("#telefone");
+telefone.addEventListener("keypress", ()=>{
+	let telefoneFormatado = telefone.value.length;
+
+	if (telefoneFormatado === 0) {
+		telefone.value += "(";
+	} else if(telefoneFormatado === 3){
+		telefone.value += ") ";
+	} else if (telefoneFormatado === 10) {
+		telefone.value += "-";
+	}
+});
+
+        </script>
     
 </body>
 </html>
