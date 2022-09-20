@@ -260,6 +260,7 @@ body{
     padding: 30px;
 	border-radius: 10px;
 	width: 600px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .input-format{
@@ -389,20 +390,25 @@ h2{
 .produto-card{
 	width: 300px;
 	height: fit-content;
-	background-color: #ff8343;
+	/*background-color: #0b0c42;*/
+	background-color: #b1b0b0;
 	padding: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .infs{
+	width: 80%;
+	height: 100px;
+	padding: 5px;
 	margin-left: 10px;
 	display: flex;
 	align-items: flex-end;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: #ff0043;
+	background-color: #cacaca;
 }
 
 .infs p{
@@ -415,6 +421,7 @@ h2{
 
 .infs p, .infs span{
 	font-family: 'Merriweather Sans', sans-serif;
+	color: #601f8e;
 }
 
 .img-container{
@@ -423,6 +430,36 @@ h2{
 
 .img-container img{
 	width: 100%;
+}
+
+.cardPreco{
+	width: 300px;
+	height: 100px;
+	background-color: #b1b0b0;
+	padding: 10px;
+	margin-top: 100px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+}
+
+.valores{
+	display: flex;
+	flex-direction: column;
+	background-color: #cacaca;
+	padding: 5px;
+}
+
+.subtotal, .frete, .total{
+	font-family: sans-serif;
+	color: #601f8e;
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+.total{
+	font-size: 2rem;
+	margin-top: 5%;
 }
 
 footer{
