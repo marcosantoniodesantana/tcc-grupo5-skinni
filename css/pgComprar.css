@@ -207,11 +207,12 @@ body{
 }
 
 .containerImagem{
+	width: 70%;
 	margin-left: 100px;
 }
 
 .containerImagem img{
-	width: 400px;
+	width: 100%;
 }
 
 .infs{
@@ -219,6 +220,9 @@ body{
 	height: 95%;
 	/*background-color: #ff0000;*/
 	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .tituloItem{
@@ -246,13 +250,6 @@ body{
 	align-items: center;
 	justify-content: space-between;
 	/*background-color: #00ff00;*/
-	left: 50%;
-	transform: translate(-50%, 0);
-	position: relative;
-}
-
-.separacoes:nth-child(5){
-	top: 5%;
 	position: relative;
 }
 
@@ -347,7 +344,21 @@ body{
 	overflow: hidden;
 }
 
-.comprar span, .calcularFrete span{
+.comprar{
+	margin-top: 10%;
+	padding: 10px 50px;
+}
+
+.comprar:hover{
+	background-color: #9907c5;
+}
+
+.comprar span{
+	font-size: 2rem;
+	color: #fff;
+}
+
+.calcularFrete span{
 	color:  #fff;
 	font-weight: 600;
 	font-size: 1rem;
