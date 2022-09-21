@@ -391,7 +391,7 @@ h2{
 	width: 300px;
 	height: fit-content;
 	/*background-color: #0b0c42;*/
-	background-color: #b1b0b0;
+	background-color: #0b0c42;
 	padding: 10px;
 	display: flex;
 	align-items: center;
@@ -408,11 +408,11 @@ h2{
 	align-items: flex-end;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: #cacaca;
+	background-color: #4c1970;
 }
 
 .infs p{
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 }
 
 .infs span{
@@ -421,7 +421,7 @@ h2{
 
 .infs p, .infs span{
 	font-family: 'Merriweather Sans', sans-serif;
-	color: #601f8e;
+	color: #e5e32b;
 }
 
 .img-container{
@@ -435,7 +435,7 @@ h2{
 .cardPreco{
 	width: 300px;
 	height: 100px;
-	background-color: #b1b0b0;
+	background-color: #0b0c42;
 	padding: 10px;
 	margin-top: 100px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -446,13 +446,13 @@ h2{
 .valores{
 	display: flex;
 	flex-direction: column;
-	background-color: #cacaca;
+	background-color: #4c1970;
 	padding: 5px;
 }
 
 .subtotal, .frete, .total{
 	font-family: sans-serif;
-	color: #601f8e;
+	color: #e5e32b;
 	font-size: 1.3rem;
 	font-weight: 600;
 }
