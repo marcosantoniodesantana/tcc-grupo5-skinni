@@ -269,9 +269,32 @@ body{
 	justify-content: space-around;
 }
 
-input[type="radio"]:checked{
-	background-color: #00ff00;
+input[type="radio"]{
+	display: none;
 }
+
+.forma-pagamentos p{
+	display: flex;
+	position: relative;
+}
+
+p > label{
+	width: 10px;
+	height: 10px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #e5e32b;
+	border-radius: 50%;
+	margin-top: 3px;
+}
+
+p span{
+	margin-left: 5px;
+	color: #601f8e;
+}
+
 
 .container .form-area{
     text-align: center;
