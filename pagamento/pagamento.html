@@ -103,5 +103,17 @@
 
 	</form>
 
+	<script>
+		let pag = document.querySelector("label:nth-child(1)");
+		pag.addEventListener("click", ()=>{
+			document.querySelector("input[type='radio']:nth-child(1)").click()
+		})
+
+		let pag2 = document.querySelector("label:nth-child(2)");
+		pag2.addEventListener("click", ()=>{
+			document.querySelector("input[type='radio']:nth-child(2)").click()
+		})
+	</script>
+
 </body>
 </html>
