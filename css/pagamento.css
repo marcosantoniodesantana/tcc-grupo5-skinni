@@ -302,6 +302,7 @@ p > label:active + input[type="radio"]:checked{
 }
 */
 
+
 p span{
 	font-size: 1.2rem;
 	font-family: sans-serif;
