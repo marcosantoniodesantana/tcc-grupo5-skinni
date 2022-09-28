@@ -296,9 +296,11 @@ p > label:hover{
 	background-color: #4c1970;
 }
 
+/*
 p > label:active + input[type="radio"]:checked{
 	background-color: #ff8343;
 }
+*/
 
 p span{
 	font-size: 1.2rem;

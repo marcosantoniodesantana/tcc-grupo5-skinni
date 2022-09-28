@@ -83,35 +83,64 @@
 			<h1>Forma de pagamento</h1>
 
 			<div class="forma-pagamentos">
-					<input type="radio" class="credito" name="credito">
+					<input type="radio" class="credito" id="iCredito" name="credito">
 					<input type="radio" class="debito" name="credito">
 					<input type="radio" class="pix" name="credito">
 					<input type="radio" class="paypal" name="credito">
 					<input type="radio" class="boleto" name="credito">
 
-					<p><label for="credito"></label>  <span>Cartão de débito</span></p>
+					<p><label for="credito" id="credito"></label>  <span>Cartão de débito</span></p>
 
-					<p><label for="debito"></label> <span>Cartão de crédito</span></p>
+					<p><label for="debito" id="debito"></label> <span>Cartão de crédito</span></p>
 
-					<p><label for="pix"></label> <span>Pix</span></p>
+					<p><label for="pix" id="pix"></label> <span>Pix</span></p>
 
-					<p><label for="paypal"></label> <span>Paypal</span></p>
+					<p><label for="paypal" id="paypal"></label> <span>Paypal</span></p>
 
-					<p><label for="boleto"></label> <span>Boleto</span></p>
+					<p><label for="boleto" id="boleto"></label> <span>Boleto</span></p>
 			</div>
 		</section>
 
 	</form>
 
 	<script>
-		let pag = document.querySelector("label:nth-child(1)");
+		let pag = document.querySelector("#credito");
+		pag.style.backgroundColor = "#00ff00"
+		
 		pag.addEventListener("click", ()=>{
-			document.querySelector("input[type='radio']:nth-child(1)").click()
+			let c = document.querySelector("#iCredito")
+
+			c.onclick = () => {
+
+				//console.log("Opção de crédito clicado")
+					pag.style.backgroundColor = "#ff0000"
+
+					if(pag.style.backgroundColor = "#ff0000"){
+						pag.style.backgroundColor = "#00ff00"
+					}
+
+			}
+			c.click()
 		})
 
-		let pag2 = document.querySelector("label:nth-child(2)");
+		let pag2 = document.querySelector("#debito");
 		pag2.addEventListener("click", ()=>{
-			document.querySelector("input[type='radio']:nth-child(2)").click()
+			document.querySelector(".debito").click()
+		})
+
+		let pag3 = document.querySelector("#pix");
+		pag3.addEventListener("click", ()=>{
+			document.querySelector(".pix").click()
+		})
+
+		let pag4 = document.querySelector("#paypal");
+		pag4.addEventListener("click", ()=>{
+			document.querySelector(".paypal").click()
+		})
+
+		let pag5 = document.querySelector("#boleto");
+		pag5.addEventListener("click", ()=>{
+			document.querySelector(".boleto").click()
 		})
 	</script>
 
