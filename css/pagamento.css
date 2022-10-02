@@ -250,6 +250,7 @@ body{
 .container{
     width: 65%;
     background-color:  #0b0c42;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
@@ -272,7 +273,90 @@ body{
 }
 
 input[type="radio"]{
-	/*display: none;*/
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #e5e32b;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+input[type="radio"]:before{
+	content: " ";
+	width: 14px;
+	height: 14px;
+	background-color: #e5e32b;
+	position: absolute;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+input[type="radio"]:checked:before{
+	opacity: 1;
+}
+
+#area-pagamento{
+	width: 65%;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: #0b0c42;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 100%);
+	position: relative;
+}
+
+.area-credito{
+	width: 100%;
+	background-color: #601f8e;
+}
+
+.input-cartao, .divisao{
+	width: 100%;
+	height: 25px;
+	margin: 1% 0;
+	overflow: hidden;
+}
+
+.divisao span{
+	font-family: sans-serif;
+	margin-left: 0.5%;
+}
+
+.input-cartao{
+	background-color: #ff8343;
+}
+
+.input-cartao input{
+	width: 100%;
+	height: 100%;
+}
+
+.divisao input{
+	width: 45%;
+	height: 100%;
+}
+
+.input-cartao input, .divisao input{
+	background-color: #8586a1;
+	outline: 0;
+	border: 0;
+	border-style: none;
+}
+
+.input-cartao input::placeholder,
+.divisao input::placeholder{
+	color: #4c1970;
+}
+
+.divisao{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .forma-pagamentos p{
@@ -280,20 +364,8 @@ input[type="radio"]{
 	position: relative;
 }
 
-p > label{
-	width: 10px;
-	height: 10px;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 2px solid #e5e32b;
-	border-radius: 50%;
-	margin-top: 3px;
-}
-
-p > label:hover{
-	background-color: #4c1970;
+.check{
+	background-color: #ff0043;
 }
 
 /*

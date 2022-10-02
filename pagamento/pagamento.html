@@ -83,64 +83,93 @@
 			<h1>Forma de pagamento</h1>
 
 			<div class="forma-pagamentos">
-					<input type="radio" class="credito" id="iCredito" name="credito">
-					<input type="radio" class="debito" name="credito">
-					<input type="radio" class="pix" name="credito">
-					<input type="radio" class="paypal" name="credito">
-					<input type="radio" class="boleto" name="credito">
+				
+				<p>
+					<input type="radio" class="credito" id="credito" value="credito" name="pagamento">
+					<span>Cartão de crédito</span>
+				</p>
+				
+				<p>
+					<input type="radio" class="debito" id="debito" value="debito" name="pagamento">
+					<span>Cartão de débito</span>
+				</p>
+				
+				<p>
+					<input type="radio" class="pix" id="pix" value="pix" name="pagamento">
+					<span>Pix</span>
+				</p>
+				
+				<p>
+					<input type="radio" class="paypal" id="paypal" value="paypal" name="pagamento">
+					<span>Paypal</span>
+				</p>
 
-					<p><label for="credito" id="credito"></label>  <span>Cartão de débito</span></p>
-
-					<p><label for="debito" id="debito"></label> <span>Cartão de crédito</span></p>
-
-					<p><label for="pix" id="pix"></label> <span>Pix</span></p>
-
-					<p><label for="paypal" id="paypal"></label> <span>Paypal</span></p>
-
-					<p><label for="boleto" id="boleto"></label> <span>Boleto</span></p>
+				<p>
+					<input type="radio" class="boleto" id="boleto" value="boleto" name="pagamento">
+					<span>Boleto</span>
+				</p>
 			</div>
+		</section>
+
+		<section id="area-pagamento">
+
 		</section>
 
 	</form>
 
 	<script>
-		let pag = document.querySelector("#credito");
-		pag.style.backgroundColor = "#00ff00"
+		let areaCredito = document.createElement("div")
+		areaCredito.id = "area"
+
+		let opcaoCredito = document.querySelector("#credito")
+		let opcaoDebito = document.querySelector("#debito")
+
+		let container = document.querySelector("#area-pagamento")
 		
-		pag.addEventListener("click", ()=>{
-			let c = document.querySelector("#iCredito")
+		opcaoCredito.addEventListener("click", ()=>{
+			console.log("Opçao de pagamento cartão de crédito selecionada")
+			
+			container.appendChild(areaCredito)
 
-			c.onclick = () => {
+			areaCredito.innerHTML = `
+			<div class="area-credito">
+				<div class="input-cartao">
+					<input type="number" placeholder="Nº do cartão" name="numeroCredito" id="numero-cartao">
+				</div>
 
-				//console.log("Opção de crédito clicado")
-					pag.style.backgroundColor = "#ff0000"
+				<div class="input-cartao">
+					<input type="number" placeholder="Código do cartão" name="numeroCredito" id="numero-cartao">
+				</div>
 
-					if(pag.style.backgroundColor = "#ff0000"){
-						pag.style.backgroundColor = "#00ff00"
-					}
- 
-			}
-			c.click()
+				<div class="divisao">
+					<span class="validade">Data de validade: </span>
+					<input type="date" name="validade" id="">
+				</div>
+			</div>
+			`
 		})
 
-		let pag2 = document.querySelector("#debito");
-		pag2.addEventListener("click", ()=>{
-			document.querySelector(".debito").click()
-		})
+		opcaoDebito.addEventListener("click", ()=>{
+			console.log("Opçao de pagamento cartão de crédito selecionada")
+			
+			container.appendChild(areaCredito)
 
-		let pag3 = document.querySelector("#pix");
-		pag3.addEventListener("click", ()=>{
-			document.querySelector(".pix").click()
-		})
+			areaCredito.innerHTML = `
+			<div class="area-debito">
+				<div class="input-cartao">
+					<input type="number" placeholder="Nº do cartão" name="numeroCredito" id="numero-cartao">
+				</div>
 
-		let pag4 = document.querySelector("#paypal");
-		pag4.addEventListener("click", ()=>{
-			document.querySelector(".paypal").click()
-		})
+				<div class="input-cartao">
+					<input type="number" placeholder="Código do cartão" name="numeroCredito" id="numero-cartao">
+				</div>
 
-		let pag5 = document.querySelector("#boleto");
-		pag5.addEventListener("click", ()=>{
-			document.querySelector(".boleto").click()
+				<div class="divisao">
+					<span class="validade">Data de validade: </span>
+					<input type="date" name="validade" id="">
+				</div>
+			</div>
+			`
 		})
 	</script>
 
