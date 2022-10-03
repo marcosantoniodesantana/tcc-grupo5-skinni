@@ -318,7 +318,7 @@ input[type="radio"]:checked:before{
 	width: 100%;
 	height: 25px;
 	margin: 1% 0;
-	overflow: hidden;
+	position: relative;
 }
 
 .divisao span{
@@ -328,10 +328,18 @@ input[type="radio"]:checked:before{
 
 .input-cartao{
 	background-color: #ff8343;
+	display: flex;
+	align-items: center;
+}
+
+.input-cartao label{
+	position: absolute;
+	left: 5px;
+	font-family: sans-serif;
 }
 
 .input-cartao input{
-	width: 100%;
+	width: 99.7%;
 	height: 100%;
 }
 
