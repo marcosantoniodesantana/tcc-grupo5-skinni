@@ -330,12 +330,28 @@ input[type="radio"]:checked:before{
 	background-color: #ff8343;
 	display: flex;
 	align-items: center;
+	margin: 2.5% 0 5% 0;
+}
+
+.input-cartao:nth-child(2){
+	margin: 0;
 }
 
 .input-cartao label{
 	position: absolute;
 	left: 5px;
 	font-family: sans-serif;
+}
+
+.input-cartao input:focus + label{
+	top: -30px;
+	color: #e5e32b;
+}
+
+.input-cartao > input:focus:required + label,
+.input-cartao > input:not(:placeholder-shown) + label{
+	top: -30px;
+	color: #e5e32b;
 }
 
 .input-cartao input{
