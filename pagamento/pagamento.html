@@ -108,6 +108,9 @@
 
 		<section id="area-pagamento">
 
+			<img src="../imagens/imagens_pagina/formas_pagamento/visa.png" alt="">
+			<img src="../imagens/imagens_pagina/formas_pagamento/elo.png" alt="">
+
 		</section>
 
 	</form>
@@ -125,16 +128,17 @@
 			console.log("Opçao de pagamento cartão de crédito selecionada")
 			
 			container.appendChild(areaCredito)
+			container.style.backgroundColor="#0b0c42";
 
 			areaCredito.innerHTML = `
 			<div class="area-credito">
 				<div class="input-cartao">
-					<input type="number" placeholder=" " name="numeroCredito" class="numero-cartao">
+					<input type="text" maxlength="19" placeholder=" " name="numeroCredito" id="n-credito" class="numero-cartao">
 					<label for="numero-cartao">Nº do cartão</label>
 				</div>
 					
 				<div class="input-cartao">
-					<input type="number" placeholder=" " name="numeroCredito" class="cod-cartao">
+					<input type="text" placeholder=" " name="numeroCredito" class="cod-cartao">
 					<label for="cod-cartao">Código do cartão</label>
 				</div>
 
@@ -144,6 +148,21 @@
 				</div>
 			</div>
 			`
+
+			let nCredito = document.querySelector("#n-credito")
+
+			nCredito.addEventListener("keypress", ()=>{
+				console.log(nCredito.value)
+
+				let formatNcredito = nCredito.value.length
+
+				//Verifica se é número ou texto
+
+				if(formatNcredito === 4 || formatNcredito === 9 || formatNcredito === 14){
+					nCredito.value += "."
+				}
+
+			})
 		})
 
 		opcaoDebito.addEventListener("click", ()=>{
