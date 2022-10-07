@@ -334,7 +334,7 @@ input[type="radio"]:checked:before{
 }
 
 .input-cartao:nth-child(2){
-	margin: 0;
+	margin: -1% 0 0;
 }
 
 .input-cartao label{
@@ -344,13 +344,13 @@ input[type="radio"]:checked:before{
 }
 
 .input-cartao input:focus + label{
-	top: -30px;
+	top: -22px;
 	color: #e5e32b;
 }
 
 .input-cartao > input:focus:required + label,
 .input-cartao > input:not(:placeholder-shown) + label{
-	top: -30px;
+	top: -22px;
 	color: #e5e32b;
 }
 
