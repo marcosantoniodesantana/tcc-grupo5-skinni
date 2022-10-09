@@ -108,11 +108,6 @@
 
 		<section id="area-pagamento">
 
-			<input type="radio" name="bandeira" class="bandeiraCartao">
-
-			<img src="../imagens/imagens_pagina/formas_pagamento/visa.png" alt="">
-			<img src="../imagens/imagens_pagina/formas_pagamento/elo.png" alt="">
-
 		</section>
 
 	</form>
@@ -123,11 +118,12 @@
 
 		let opcaoCredito = document.querySelector("#credito")
 		let opcaoDebito = document.querySelector("#debito")
+		let opcaoPix = document.querySelector("#pix")
+		let opcaoBoleto = document.querySelector("#boleto")
 
 		let container = document.querySelector("#area-pagamento")
 		
 		opcaoCredito.addEventListener("click", ()=>{
-			console.log("Opçao de pagamento cartão de crédito selecionada")
 			
 			container.appendChild(areaCredito)
 			container.style.backgroundColor="#0b0c42";
@@ -136,18 +132,28 @@
 			<div class="area-credito">
 				<div class="input-cartao">
 					<input type="text" maxlength="19" placeholder=" " name="numeroCredito" id="n-credito" class="numero-cartao">
-					<label for="numero-cartao">Nº do cartão</label>
+					<label for="numero-cartao">Nº do cartão de crédito</label>
 				</div>
 					
 				<div class="input-cartao">
-					<input type="text" placeholder=" " name="numeroCredito" class="cod-cartao">
+					<input type="text" maxlength="3" placeholder=" " name="codCredito" class="cod-cartao">
 					<label for="cod-cartao">Código do cartão</label>
 				</div>
 
 				<div class="divisao">
 					<span class="validade">Data de validade: </span>
-					<input type="date" name="validade" id="validade">
+					<input type="date" name="validadeCredito" id="validade">
 				</div>
+
+				<div class="area-bandeiras">
+					<span class="bandeira-cartao">Escolha a bandeira do cartão: </span>
+
+					<figure class="bandeiras-op">
+						<input type="radio" name="bandeiraCartao" value="visa" class="bandeiraCartao">
+						<input type="radio" name="bandeiraCartao" value="elo" class="bandeiraCartao">
+					</figure>
+				</div>
+
 			</div>
 			`
 
@@ -169,26 +175,71 @@
 
 		opcaoDebito.addEventListener("click", ()=>{
 			console.log("Opçao de pagamento cartão de crédito selecionada")
-			
+
+			container.style.backgroundColor="#0b0c42";
 			container.appendChild(areaCredito)
 
 			areaCredito.innerHTML = `
-			<div class="area-debito">
+			<div class="area-credito">
 				<div class="input-cartao">
-					<input type="number" placeholder="Nº do cartão" name="numeroCredito" id="numero-cartao">
+					<input type="text" maxlength="19" placeholder=" " name="numeroDebito" id="n-credito" class="numero-cartao">
+					<label for="numero-cartao">Nº do cartão de débito</label>
 				</div>
-
+					
 				<div class="input-cartao">
-					<input type="number" placeholder="Código do cartão" name="numeroCredito" id="numero-cartao">
+					<input type="text" maxlength="3" placeholder=" " name="codDebito" class="cod-cartao">
+					<label for="cod-cartao">Código do cartão</label>
 				</div>
 
 				<div class="divisao">
 					<span class="validade">Data de validade: </span>
-					<input type="date" name="validade" id="">
+					<input type="date" name="validadeDebito" id="validade">
+				</div>
+
+				<div class="area-bandeiras">
+					<span class="bandeira-cartao">Escolha a bandeira do cartão: </span>
+
+					<figure class="bandeiras-op">
+						<input type="radio" name="bandeiraCartao" value="visa" class="bandeiraCartao">
+						<input type="radio" name="bandeiraCartao" value="elo" class="bandeiraCartao">
+					</figure>
 				</div>
 			</div>
 			`
 		})
+
+		opcaoPix.addEventListener("click", ()=>{
+			container.appendChild(areaCredito)
+			container.style.backgroundColor="#0b0c42";
+
+			areaCredito.innerHTML = `
+			<h2> Efetue já seu pegamento!</h2>
+
+			<div class="qrcode">
+				<img src="../imagens/imagens_pagina/pagamento/qrcode.jpeg"/>
+			</div>
+			`
+
+		})
+
+		opcaoBoleto.addEventListener("click", ()=>{
+			container.appendChild(areaCredito)
+			container.style.backgroundColor="#0b0c42";
+
+			areaCredito.innerHTML = `
+			<h2> Efetue já seu pagamento!</h2>
+
+			<div class="boleto-cod">
+				<img src="../imagens/imagens_pagina/pagamento/codigo_barras.png"/>
+			</div>
+
+			<figure class="link-boleto">
+				<a href="../imagens/imagens_pagina/pagamento/boleto.pdf">Visualizar boleto</a>
+			</figure>
+			`
+
+		})
+
 	</script>
 
 </body>

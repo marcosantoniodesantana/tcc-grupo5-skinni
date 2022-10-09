@@ -302,17 +302,46 @@ body{
 
 .bandeiraCartao{
 	appearance: none;
-	border: 5px dotted #ff0043;
-	width: 150px;
-	height: 93px;
+    width: 75px;
+    height: 46.5px;
+	background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+	margin-left: 1%;
 }
 
 .bandeiraCartao:nth-child(1){
 	background-image: url("../imagens/imagens_pagina/formas_pagamento/visa.png");
 }
 
+.bandeiraCartao:nth-child(2){
+	background-image: url("../imagens/imagens_pagina/formas_pagamento/elo.png");
+}
+
 .bandeiraCartao:before{
-	content: "a";
+	content: " ";
+    width: 67px;
+    height: 38.5px;
+    border: 4px dashed #1fe754;
+    position: absolute;
+	opacity: 0;
+}
+
+.bandeiraCartao:checked:before{
+	opacity: 1;
+}
+
+.area-bandeiras{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 5%;
+}
+
+.bandeiras-op{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 #area-pagamento{
@@ -325,9 +354,46 @@ body{
 	position: relative;
 }
 
+.link-boleto{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.link-boleto a{
+	color: #e5e32b;
+	font-size: 2rem;
+	text-decoration: none;
+	font-family: 'Merriweather Sans';
+}
+
+.link-boleto a:hover{
+	text-decoration: underline;
+}
+
+.qrcode{
+	width: 45%;
+	margin-top: 5%;
+}
+
+.boleto-cod{
+	width: 100%;
+	margin: 5% 0;
+	background-color: #fff;
+	padding: 5px;
+}
+
+.boleto-cod img{
+	width: 100%;
+}
+
+.qrcode img{
+	width: 100%
+}
+
 .area-credito{
 	width: 100%;
-	background-color: #601f8e;
 }
 
 .input-cartao, .divisao{
@@ -337,36 +403,39 @@ body{
 	position: relative;
 }
 
-.divisao span{
+.divisao span, .bandeira-cartao{
 	font-family: sans-serif;
 	margin-left: 0.5%;
+	font-size: 1.55rem;
+	color: #e5e32b;
 }
 
 .input-cartao{
 	background-color: #ff8343;
 	display: flex;
 	align-items: center;
-	margin: 2.5% 0 5% 0;
+	margin: 2.5% 0 10% 0;
 }
 
 .input-cartao:nth-child(2){
-	margin: -1% 0 0;
+	margin: 1% 0 5% 0;
 }
 
 .input-cartao label{
 	position: absolute;
 	left: 5px;
 	font-family: sans-serif;
+	font-size: 1.55rem;
 }
 
 .input-cartao input:focus + label{
-	top: -22px;
+	top: -35px;
 	color: #e5e32b;
 }
 
 .input-cartao > input:focus:required + label,
 .input-cartao > input:not(:placeholder-shown) + label{
-	top: -22px;
+	top: -35px;
 	color: #e5e32b;
 }
 
@@ -397,6 +466,12 @@ body{
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	margin-top: 4%;
+}
+
+input[type="text"],
+input[type="date"]{
+	height: 35px;
 }
 
 .forma-pagamentos p{
