@@ -6,6 +6,7 @@
 
 	<link rel="shortcut icon" href="../imagens/imagens_pagina/icone_titulo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,11 +111,15 @@
 
 		</section>
 
+		<figure class="sombra"></figure>
+
 	</form>
 
 	<script>
 		let areaCredito = document.createElement("div")
 		areaCredito.id = "area"
+
+		let sombra = document.querySelector(".sombra")
 
 		let opcaoCredito = document.querySelector("#credito")
 		let opcaoDebito = document.querySelector("#debito")
@@ -130,6 +135,12 @@
 
 			areaCredito.innerHTML = `
 			<div class="area-credito">
+
+				<button type="button" id="fechar"> <svg width="44" height="44" fill="none" stroke="#e5e32b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18 6 6 18"></path>
+  <path d="m6 6 12 12"></path>
+</svg> </button>
+
 				<div class="input-cartao">
 					<input type="text" maxlength="19" placeholder=" " name="numeroCredito" id="n-credito" class="numero-cartao">
 					<label for="numero-cartao">Nº do cartão de crédito</label>
@@ -155,22 +166,29 @@
 				</div>
 
 			</div>
+
 			`
 
+			sombra.classList.toggle("shadow")
+			sombra.addEventListener("click", ()=>{
+				console.log("Fechar")
+			})
+			
 			let nCredito = document.querySelector("#n-credito")
-
+			
 			nCredito.addEventListener("keypress", ()=>{
 				console.log(nCredito.value)
-
+				
 				let formatNcredito = nCredito.value.length
-
+				
 				//Verifica se é número ou texto
-
+				
 				if(formatNcredito === 4 || formatNcredito === 9 || formatNcredito === 14){
-					nCredito.value += "."
+					nCredito.value += " "
 				}
-
+				
 			})
+			fecharPagamento()
 		})
 
 		opcaoDebito.addEventListener("click", ()=>{
@@ -181,6 +199,14 @@
 
 			areaCredito.innerHTML = `
 			<div class="area-credito">
+
+				<button type="button" id="fechar">
+					<svg width="44" height="44" fill="none" stroke="#e5e32b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ 						<path d="M18 6 6 18"></path>
+						<path d="m6 6 12 12"></path>
+					</svg>
+				</button>
+
 				<div class="input-cartao">
 					<input type="text" maxlength="19" placeholder=" " name="numeroDebito" id="n-credito" class="numero-cartao">
 					<label for="numero-cartao">Nº do cartão de débito</label>
@@ -206,6 +232,9 @@
 				</div>
 			</div>
 			`
+
+			document.querySelector(".sombra").classList.toggle("shadow")
+			fecharPagamento()
 		})
 
 		opcaoPix.addEventListener("click", ()=>{
@@ -213,12 +242,23 @@
 			container.style.backgroundColor="#0b0c42";
 
 			areaCredito.innerHTML = `
+
+			<button type="button" id="fechar">
+				<svg width="44" height="44" fill="none" stroke="#e5e32b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ 						<path d="M18 6 6 18"></path>
+						<path d="m6 6 12 12"></path>
+					</svg>
+			</button>
+
 			<h2> Efetue já seu pegamento!</h2>
 
 			<div class="qrcode">
 				<img src="../imagens/imagens_pagina/pagamento/qrcode.jpeg"/>
 			</div>
 			`
+
+			document.querySelector(".sombra").classList.toggle("shadow")
+			fecharPagamento()
 
 		})
 
@@ -227,6 +267,14 @@
 			container.style.backgroundColor="#0b0c42";
 
 			areaCredito.innerHTML = `
+
+			<button type="button" id="fechar">
+				<svg width="44" height="44" fill="none" stroke="#e5e32b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ 						<path d="M18 6 6 18"></path>
+						<path d="m6 6 12 12"></path>
+					</svg>				
+			</button>
+
 			<h2> Efetue já seu pagamento!</h2>
 
 			<div class="boleto-cod">
@@ -234,10 +282,22 @@
 			</div>
 
 			<figure class="link-boleto">
-				<a href="../imagens/imagens_pagina/pagamento/Boleto.pdf">Visualizar boleto</a>
+				<a href="../imagens/imagens_pagina/pagamento/Boleto.pdf">Imprimir boleto</a>
 			</figure>
 			`
+
+			document.querySelector(".sombra").classList.toggle("shadow")
+			fecharPagamento()
+			
 		})
+		
+		function fecharPagamento(){
+			document.querySelector("#fechar").addEventListener("click", ()=>{
+				document.querySelector("#area-pagamento").style.backgroundColor = "transparent"
+				areaCredito.innerHTML = " "
+				document.querySelector(".sombra").classList.toggle("shadow")
+			})
+		}
 
 	</script>
 
