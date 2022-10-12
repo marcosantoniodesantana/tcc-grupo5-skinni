@@ -380,8 +380,9 @@ body{
 	border-radius: 5px;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -20%);
+	transform: translate(-50%, -50%);
     position: absolute;
+	margin-top: 5%;
 }
 
 .link-boleto{
@@ -639,6 +640,12 @@ button[type="submit"]{
 	outline: 0;
 	border-radius: 5px;
 	padding: 5px 50px;
+	left: 50%;
+    transform: translate(-50%, 0%);
+    position: relative;
+	color: #e5e32b;
+	font-size: 1.5rem;
+	margin-top: 2.5%;
 }
 
 button[type="submit"]:hover{
