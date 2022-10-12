@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-image: url("../imagens/imagens_pagina/fundo.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: #ff0043;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certo{
+            appearance: none;
+            width: 50px;
+            height: 50px;
+            background-color: #e5e32b;
+            border-radius: 50%;
+        }
+
+        .certo::before{
+            content: "";
+            width: 50px;
+            height: 155px;
+            background-color: #00ff00;
+            border-radius: 50px;
+            transform: rotate(-45deg);
+            position: absolute;
+            margin: -89px -5px 0px -37px;
+        }
+
+        .certo::after{
+            content: "";
+            width: 50px;
+            height: 235px;
+            background-color: #00ff00;
+            border-radius: 50px;
+            transform: rotate(45deg);
+            position: absolute;
+            margin: -158px -5px 0px 66px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <figure class="certo"></figure>
+
+    </div>
+    
+</body>
+</html>
