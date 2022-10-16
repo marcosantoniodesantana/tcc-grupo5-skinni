@@ -23,16 +23,46 @@
             left: 50%;
             transform: translate(-50%,-50%);
             position: absolute;
-        }
-
-        div{
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        @keyframes zoom{
+            0%{
+                padding-bottom: 0px;
+            }
+            100%{
+                padding-bottom: 148px;
+            }
+        }
+
         .certo{
-            appearance: none;
+            width: 50px;
+            height: 50px;
+            background-color: #00ff00;
+            border-radius: 50px;
+            transform: rotate(-45deg);
+            position: absolute;
+            /*margin: -89px -5px 0px -37px;*/
+            /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+            animation: zoom 0.5s ease-in 0.5s normal forwards;
+        }
+/*
+        .certo::before{
+            content: "";
+            width: 50px;
+            height: 235px;
+            background-color: #00ff00;
+            border-radius: 50px;
+            transform: rotate(90deg);
+            position: absolute;
+            inset: 13px 0 30px 93px;
+        }
+        padding-bottom: 148px;
+*/
+/*
+        .certo{
             width: 50px;
             height: 50px;
             background-color: #e5e32b;
@@ -60,6 +90,8 @@
             position: absolute;
             margin: -158px -5px 0px 66px;
         }
+        */
+
     </style>
 
 </head>

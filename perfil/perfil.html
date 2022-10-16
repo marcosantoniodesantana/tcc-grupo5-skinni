@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="..//imagens/imagens_pagina/icone_titulo.png">
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Merriweather+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabecalho">
+		<div class="itens-cabecalho">
+
+
+			<div class="logo">
+				<h1 class="titulo-logo">Skinni</h1>
+			</div>
+
+			<div class="barra-pesquisa">
+				<i class="fas fa-search pesquisar-icon"></i>
+				<input type="text" class="pesquisa" id="pesquisa" placeholder="Pesquisar...">
+			</div>
+
+			<div class="icones">
+
+				<a href="../compras/compras.html">
+					<div class="compras">
+						<i class="fas fa-shopping-bag"></i>
+					</div>
+				</a>
+
+				<a href="../login/login.html">
+					<div class="usuario">
+						<i class="fas fa-user"></i>
+					</div>
+				</a>
+			</div>
+
+		</div>
+
+			<div id="menu-bar" class="menu-bar">
+				<i class="fa-solid cor fa-bars"></i>
+			</div>
+
+		<nav class="menu">
+			
+			<ul>
+
+				<li><h5 class="link-menu">Conta</h5>
+					<ul class="submenu">
+						<li><a href="../login/login.html" class="link-menu">Login</a></li>
+						<li><a href="..//cadastro/cadastro.html" class="link-menu">Criar conta</a></li>
+					</ul>
+				</li>
+
+				<li><a href="../index.html" class="link-menu"><span>Novidades</span></a></li>
+				<li><a href="../feminino/feminino.html" class="link-menu"><span>Feminino</span></a></li>
+				<li><a href="../masculino/masculino.html" class="link-menu"><span>Masculino</span></a></li>
+				<li><a href="" class="link-menu"><span>Infantil</span></a></li>
+				<li><a href="../moletons/moletons.html" class="link-menu"><span>Moletons</span></a></li>
+				<li><a href="../acessorios/acessorios.html" class="link-menu"><span>Acessórios</span></a></li>
+			</ul>
+			<section class="subMenu-inferior"></section>
+		</nav>
+	</header>
+
+    <section class="container">
+        <form method="get">
+            
+            <div class="infs">
+                <input type="text" class="nome" placeholder=" " name="nome">
+                <label for="nome">Nome</label>
+            </div>
+
+            <div class="infs">
+                <input type="text" class="email" placeholder=" " name="email">
+                <label for="email">Email</label>
+            </div>
+
+            <div class="infs">
+                <input type="text" class="telefone" placeholder=" " name="telefone">
+                <label for="telefone">Telefone</label>
+            </div>
+
+            <div class="infs">
+                <input type="password" class="senha" placeholder=" " name="senha">
+                <label for="senha">senha</label>
+            </div>
+
+            <div class="infs">
+                <input type="text" class="endereco" placeholder=" " name="endereco">
+                <label for="endereco">Endereco</label>
+            </div>
+
+            <div class="infs">
+                <input type="number" class="numero" placeholder=" " name="numero">
+                <label for="numero">Número</label>
+            </div>
+
+            <button type="submit">Atualizar dados</button>
+
+        </form>
+    </section>
+    
+    <button class="deletar-conta"><span>Excluir Conta</span></button>
+
+    <script>
+		ScrollReveal().reveal('.vitrine, #n-vitrine,  footer', { interval: 16, reset: true });
+		AOS.init();
+	</script>
+    
+</body>
+</html>
