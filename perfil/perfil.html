@@ -80,32 +80,37 @@
         <form method="get">
             
             <div class="infs">
-                <input type="text" class="nome" placeholder=" " name="nome">
+                <input type="text" class="nome" placeholder=" " required name="nome">
                 <label for="nome">Nome</label>
             </div>
 
             <div class="infs">
-                <input type="text" class="email" placeholder=" " name="email">
+                <input type="text" class="email" placeholder=" " required name="email">
                 <label for="email">Email</label>
             </div>
 
             <div class="infs">
-                <input type="text" class="telefone" placeholder=" " name="telefone">
+                <input type="text" id="telefone" maxlength="15" class="telefone" placeholder=" " required name="telefone">
                 <label for="telefone">Telefone</label>
             </div>
 
             <div class="infs">
-                <input type="password" class="senha" placeholder=" " name="senha">
-                <label for="senha">senha</label>
+				<input type="password" class="senha" placeholder=" " required name="senha">
+				<label for="senha">senha</label>
+
+				<figure class="icone-eye">
+					<svg viewBox="-6 -6 32 32" role="presentation" class="revela-senha" id="mostrar-senha"><g><path d="M3.25909 11.6021C3.94254 8.32689 6.79437 6 10 6C13.2057 6 16.0574 8.32688 16.7409 11.6021C16.7974 11.8725 17.0622 12.0459 17.3325 11.9895C17.6029 11.933 17.7763 11.6682 17.7199 11.3979C16.9425 7.67312 13.6934 5 10 5C6.3066 5 3.05742 7.67311 2.28017 11.3979C2.22377 11.6682 2.39718 11.933 2.6675 11.9895C2.93782 12.0459 3.20268 11.8725 3.25909 11.6021Z"></path><path d="M10 8C8.067 8 6.5 9.567 6.5 11.5C6.5 13.433 8.067 15 10 15C11.933 15 13.5 13.433 13.5 11.5C13.5 9.567 11.933 8 10 8ZM7.5 11.5C7.5 10.1193 8.61929 9 10 9C11.3807 9 12.5 10.1193 12.5 11.5C12.5 12.8807 11.3807 14 10 14C8.61929 14 7.5 12.8807 7.5 11.5Z"></path></g></svg>
+				</figure>
+
             </div>
 
             <div class="infs">
-                <input type="text" class="endereco" placeholder=" " name="endereco">
+                <input type="text" class="endereco" placeholder=" " required name="endereco">
                 <label for="endereco">Endereco</label>
             </div>
 
             <div class="infs">
-                <input type="number" class="numero" placeholder=" " name="numero">
+                <input type="number" class="numero" placeholder=" " required name="numero">
                 <label for="numero">Número</label>
             </div>
 
@@ -116,9 +121,29 @@
     
     <button class="deletar-conta"><span>Excluir Conta</span></button>
 
-    <script>
-		ScrollReveal().reveal('.vitrine, #n-vitrine,  footer', { interval: 16, reset: true });
-		AOS.init();
+	<script>
+		let senha = document.querySelector(".icone-eye")
+		let inputSenha = document.querySelector(".senha")
+		senha.addEventListener("click", ()=>{
+			if(inputSenha.type == "password"){
+				inputSenha.type = "text"
+			} else{
+				inputSenha.type = "password"
+			}
+		})
+
+		const telefone = document.querySelector("#telefone");
+telefone.addEventListener("keypress", ()=>{
+	let telefoneFormatado = telefone.value.length;
+
+	if (telefoneFormatado === 0) {
+		telefone.value += "(";
+	} else if(telefoneFormatado === 3){
+		telefone.value += ") ";
+	} else if (telefoneFormatado === 10) {
+		telefone.value += "-";
+	}
+});
 	</script>
     
 </body>
